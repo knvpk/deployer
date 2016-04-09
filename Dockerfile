@@ -49,7 +49,7 @@ RUN cp examples/crontab /etc/cron.d/artisan-schedule
 COPY configs/entrypoint.sh /sbin/entrypoint.sh
 RUN  chmod +x /sbin/entrypoint.sh
 COPY configs/.env.docker /var/www/deployer/.env
-COPY configs/nginx-site.conf /etc/nginx/conf.d/nginx-site.conf
+COPY configs/nginx-site.conf /etc/nginx/sites-available/default
 
 RUN chmod 0644 /etc/cron.d/artisan-schedule &&\
     touch /var/log/cron.log &&\
