@@ -41,7 +41,8 @@ RUN wget https://github.com/REBELinBLUE/deployer/archive/0.0.33.tar.gz && \
     tar xzvf 0.0.33.tar.gz --strip-components=1 && \
     chown -R www-data /var/www/deployer && \
     rm -r 0.0.33.tar.gz && \
-    php composer.phar install --no-dev -o 
+    php composer.phar install --no-dev -o && \
+    npm install --production 
 
 RUN cp examples/supervisor.conf /etc/supervisor/conf.d/deployer.conf
 RUN cp examples/crontab /etc/cron.d/artisan-schedule
