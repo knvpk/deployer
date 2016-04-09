@@ -41,4 +41,10 @@ services:
 Points to remember when using this docker file
   1) Environment variables which you will give at .env file shold be given as docker environment variables.
   2) If it is first time you are running, you must ssh in to container and migrate the database.
-     To do so  `docker exec -it {docker_container_name} bash` and then `php artisan migrate`
+     To do so  `docker exec -it {docker_container_name} bash` and then `php artisan migrate`.
+     
+# Installed items in this Docker build
+   1) PHP5-fpm 
+   2) nginx
+   3) redis (we can use seperate container if wanted but in future)
+   4) supervisor for monitoring
