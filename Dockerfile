@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 # Intall node
 RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN apt-get -q -y install nodejs npm
+RUN apt-get -q -y install nodejs npm nodejs-legacy
 
 # Install redis server
 RUN add-apt-repository  -y ppa:chris-lea/redis-server && \
