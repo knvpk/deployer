@@ -17,9 +17,15 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=toor
       - MYSQL_DATABASE=deployerdb
+    // If you want to persist data across container start and stop
+    // volumes:
+    //  - hostFolder:/var/lib/mysql
 
   php_deployer:
-    image: deployer:v1
+    image: katakampavankumar/deployer:latest
+    // If you want to persist data across container start and stop
+    //volumes: 
+    // - hostFolder1:/data
     ports:
       - 8081:80
     expose:
