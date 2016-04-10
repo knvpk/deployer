@@ -2,6 +2,8 @@
 A Docker project for php Deployer https://github.com/REBELinBLUE/deployer, Which is a very nice tool for deploying php 
 applications expescially Laravel application.
 
+> Note: This project is in Development so things can be changed.
+
 # How to use this
 I recomend to use with docker-compose which is tool for composing the docker containers in a yaml file. You can learn more 
 about docker compose in this [page](https://docs.docker.com/compose/compose-file/)
